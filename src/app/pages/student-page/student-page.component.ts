@@ -18,7 +18,15 @@ export class StudentPageComponent {
 
   displayedColumns = ["id", "name", "age", "nationality", 'edit', 'delete' ]
 
-  constructor(private readonly dialogService: MatDialog){}
+  constructor(
+    private readonly dialogService: MatDialog
+    
+    ){}
+
+
+
+
+
   addStudent(){
     const dialog = this.dialogService.open(StudentDialogComponent)
     dialog.afterClosed().subscribe((value => {
