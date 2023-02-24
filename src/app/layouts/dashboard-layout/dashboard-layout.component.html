@@ -1,5 +1,8 @@
 <mat-sidenav-container fullscreen>
+
+    
     <mat-sidenav #sidenav mode="push"> 
+        
         
         <mat-toolbar color="primary">
             <span>Menú</span>
@@ -12,12 +15,26 @@
     
         <mat-nav-list>
             
-            <a routerLink="./listado"
+            <a routerLink="./students"
             mat-list-item
             (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>bookmark</mat-icon>
                 <span>Listado de Alumnos</span>
-            </a>       
+            </a>      
+            
+            <a routerLink="./cursos"
+            mat-list-item
+            (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>bookmark</mat-icon>
+                <span>Listado de Cursos</span>
+            </a>  
+
+            <a routerLink="./inscripciones"
+            mat-list-item
+            (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>dataset linked</mat-icon>
+                <span>Inscripciones</span>
+            </a>  
     
         </mat-nav-list>
 
@@ -25,23 +42,27 @@
 
     
 
-    <mat-toolbar>
+    <mat-toolbar >
+
+    
         
         <button mat-icon-button
             (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
 
-        <span class="spacer"></span>
+       
+        
 
-        <button mat-raised-button>
-            Logout
-        </button>
+      
 
     </mat-toolbar>
 
     <div class="container">
-        <ng-content></ng-content>
+        
+            <router-outlet></router-outlet>
+        
     </div>
 
 </mat-sidenav-container>
+

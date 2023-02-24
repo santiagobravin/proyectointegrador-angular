@@ -1,6 +1,9 @@
+
 <h1 mat-dialog-title>Agregar estudiante</h1>
+
     <div mat-dialog-content>
-        <form [formGroup]="studentForm">
+        
+        <form class="flex flex-column mb-2" [formGroup]="studentForm">
             <mat-form-field appearance="fill">
                 <mat-label>Nombre Completo</mat-label>
                 <input [formControl]="nameControl" matInput>
@@ -23,3 +26,5 @@
         </div>
 
     </div>
+
+  

@@ -3,7 +3,7 @@ import { Component, Inject} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-import { Student } from 'src/app/models/student';
+import { Student } from 'src/app/features/students/models/student';
 
 @Component({
   selector: 'app-student-dialog',
