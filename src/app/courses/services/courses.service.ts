@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { CourseDialogComponent } from '../course-dialog/course-dialog.component';
+import { CourseDialogComponent } from '../components/course-dialog/course-dialog.component';
 import { Curso } from '../models/courses';
 
 @Injectable({

@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Curso } from '../models/courses';
+import { Curso } from '../../models/courses';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { CourseDialogComponent } from '../course-dialog/course-dialog.component';
-import { CoursesService } from '../services/courses.service';
+import { CoursesService } from '../../services/courses.service';
 import { Subscription } from 'rxjs';
 
 
@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 export class CoursesPageComponent implements OnInit, OnDestroy{
 
   dataSource!: MatTableDataSource<Curso>;
-  columsToDisplay: string[] = ["comision", "nombre", "profesor", "edit", "delete"]
+  columsToDisplay: string[] = ["comision", "nombre", "profesor", "edit", "delete", "detalle"]
   suscription!: Subscription
   
 

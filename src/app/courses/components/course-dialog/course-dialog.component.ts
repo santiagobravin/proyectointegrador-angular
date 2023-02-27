@@ -2,7 +2,7 @@ import { DialogRef } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Curso } from '../models/courses';
+import { Curso } from '../../models/courses';
 
 @Component({
   selector: 'app-course-dialog',

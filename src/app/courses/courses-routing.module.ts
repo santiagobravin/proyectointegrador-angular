@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { CoursesPageComponent } from './courses-page/courses-page.component';
+import { CoursesPageComponent } from './components/courses-page/courses-page.component';
+import { CoursesCardComponent } from './components/courses-card/courses-card.component';
 
 
 const routes : Routes = [
@@ -11,8 +12,8 @@ const routes : Routes = [
 
     children: [
 
-      {path:"listar", component:CoursesPageComponent}
-      
+      {path:"listar", component:CoursesPageComponent},
+      {path: ":id", component: CoursesCardComponent}
     ]
   }
 ]
