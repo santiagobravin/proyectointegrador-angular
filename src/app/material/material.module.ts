@@ -9,12 +9,26 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { MatCard } from '@angular/material/card';
 
-import {MatTableModule} from '@angular/material/table';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 
 
 @NgModule({
+  imports: [ 
+    MatCardModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatButtonModule, 
+    MatIconModule,
+    MatListModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    
+  ],
   exports:[
     MatCardModule,
     MatSidenavModule,
@@ -25,7 +39,8 @@ import {MatTableModule} from '@angular/material/table';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    
 
   ]
 })

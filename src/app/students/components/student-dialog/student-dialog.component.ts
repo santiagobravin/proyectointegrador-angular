@@ -3,7 +3,7 @@ import { Component, Inject} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-import { Student } from 'src/app/models/student';
+import { Student } from 'src/app/students/models/student';
 
 @Component({
   selector: 'app-student-dialog',
@@ -11,16 +11,16 @@ import { Student } from 'src/app/models/student';
   
 })
 export class StudentDialogComponent {
-  nameControl = new FormControl();
-  ageControl = new FormControl();
-  nationalityControl = new FormControl()
+  nombreControl = new FormControl();
+  edadControl = new FormControl();
+  cursoControl = new FormControl()
   studentForm = new FormGroup({
-    name:this.nameControl,
-    age: this.ageControl,
-    nationality: this.nationalityControl
+    nombre:this.nombreControl,
+    edad: this.edadControl,
+    curso: this.cursoControl
   })
 
-  constructor(private readonly dialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public data: Student | null,) {
+  constructor(private dialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public data: Student | null,) {
     console.log(data);
     if(data){
       this.studentForm.patchValue(data)
