@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StudentsModule } from './students/students.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,13 +26,14 @@ import { CoreModule } from './core/core.module';
     
     MaterialModule,
     
-    StudentsModule,
+    
     CoreModule,
     
     
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
     
   ],
   providers: [],

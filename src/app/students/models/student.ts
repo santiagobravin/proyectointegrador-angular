@@ -1,10 +1,9 @@
 export interface Student{
 
-    
+    nombre : string
+    curso : string
+    edad: number
     id      : number,
-    nombre    : string,
-    edad     : number,
-    curso  : string,
     
     
     

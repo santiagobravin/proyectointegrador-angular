@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
 import {  RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { StudentPageComponent } from './students/components/student-page/student-page.component';
+
 import { InicioComponent } from './core/inicio/inicio.component';
 import { NoEncontradoComponent } from './core/no-encontrado/no-encontrado.component';
+import { SesionGuard } from './guards/sesion.guard';
 
   const routes : Routes = [
 
-    {path:"inicio", component:InicioComponent},
+    {
+
+    path:"inicio", canActivate: [SesionGuard],
+    component:InicioComponent
+
+    },
+
+    {
+      path:"auth",
+      
+      loadChildren: ()=> import("./auth/auth.module").then(m=>m.AuthModule)
+    },
 
     {
       path:"alumnos",
@@ -23,7 +34,7 @@ import { NoEncontradoComponent } from './core/no-encontrado/no-encontrado.compon
     },
     
     {path:"", redirectTo:"inicio", pathMatch:"full"},
-    {path:"**", component:NoEncontradoComponent},
+    {path:"**", component:NoEncontradoComponent}
     
    
   ]

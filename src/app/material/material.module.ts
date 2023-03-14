@@ -9,9 +9,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { MatCard } from '@angular/material/card';
 
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 
@@ -27,6 +27,8 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatSlideToggleModule
+    
     
   ],
   exports:[
@@ -40,6 +42,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
+    MatSlideToggleModule
     
 
   ]

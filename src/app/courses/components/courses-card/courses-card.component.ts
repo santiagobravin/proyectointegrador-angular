@@ -29,7 +29,8 @@ ngOnInit(): void {
   this.suscription = this.cursoService.obtenerCursos().subscribe((cursosObservable:Curso[]) => {
 
     this.cursos = cursosObservable;
-    console.log(this.cursos);})
+    console.log(this.cursos);
+  })
 
   this.activatedRoute.params
   .subscribe( ({id})=> {

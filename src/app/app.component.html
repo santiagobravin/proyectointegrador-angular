@@ -4,7 +4,7 @@
         <mat-toolbar color="primary">
             
             <span>CODERHOUSE</span>
-            <span class="spacer"></span>
+            
             <button mat-icon-button
                 (click)="sidenav.toggle()">
                 
@@ -35,7 +35,7 @@
                 <span>Listado de Cursos</span>
             </a>    
 
-            <a class="mb-2" routerLink="./listado"
+            <a class="mb-2" routerLink="./inscripcion"
             mat-list-item
             (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>edit</mat-icon>
@@ -48,14 +48,26 @@
 
 
 
-    <mat-toolbar>
-        
+    <mat-toolbar class="d-flex justify-content-between">
+        <div>
         <button mat-icon-button
             (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
+        </div>
+        <div>
+        <button mat-icon-button
+            routerLink="auth/login">
+            <mat-icon>login</mat-icon>
+        </button>
+        <button mat-icon-button
+            routerLink="auth/registro">
+            <mat-icon>how_to_reg</mat-icon>
+        </button>
+        </div>
 
     </mat-toolbar>
+    
     
     <router-outlet></router-outlet>
 

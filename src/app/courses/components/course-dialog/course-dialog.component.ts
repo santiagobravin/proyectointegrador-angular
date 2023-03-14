@@ -1,6 +1,6 @@
 import { DialogRef } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Curso } from '../../models/courses';
 
@@ -11,7 +11,7 @@ import { Curso } from '../../models/courses';
 })
 export class CourseDialogComponent {
 
-  nombreControl = new FormControl();
+  nombreControl = new FormControl()
   comisionControl = new FormControl();
   profesorControl = new FormControl()
   cursoForm = new FormGroup({
@@ -20,7 +20,7 @@ export class CourseDialogComponent {
     profesor: this.profesorControl
   })
 
-  constructor(private readonly dialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public data: Curso | null,) {
+  constructor(private readonly dialogRef:DialogRef, @Inject(MAT_DIALOG_DATA) public data: Curso | any) {
     console.log(data);
     if(data){
       this.cursoForm.patchValue(data)
